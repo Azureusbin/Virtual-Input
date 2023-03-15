@@ -1,24 +1,29 @@
-﻿{
-  "FileVersion": 3,
-  "Version": 1,
-  "VersionName": "1.0",
-  "FriendlyName": "Virtual Input",
-  "Description": "Use this plugin to trigger input events without touch physical input devices.",
-  "Category": "Other",
-  "CreatedBy": "AzureuBin",
-  "CreatedByURL": "",
-  "DocsURL": "",
-  "MarketplaceURL": "",
-  "CanContainContent": false,
-  "IsBetaVersion": false,
-  "IsExperimentalVersion": false,
-  "Installed": false,
-  "Modules": [
-    {
-      "Name": "VirtualInput",
-      "Type": "Runtime",
-      "LoadingPhase": "PreLoadingScreen",
-      "WhitelistPlatforms": ["Win64","Linux","Mac"]
-    }
-  ]
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Virtual Input",
+	"Description": "Use this plugin to trigger input events without touch physical input devices.",
+	"Category": "Input",
+	"CreatedBy": "AzureuBin",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "VirtualInput",
+			"Type": "Runtime",
+			"LoadingPhase": "PreLoadingScreen",
+			"PlatformAllowList": [
+				"Win64",
+				"Linux",
+				"Mac"
+			]
+		}
+	],
+	"SupportURL": ""
 }
