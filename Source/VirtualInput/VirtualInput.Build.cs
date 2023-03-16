@@ -1,4 +1,4 @@
-﻿// Some copyright should be here...
+﻿// Copyright © 2023 AzureuBin. All rights reserved.
 
 using UnrealBuildTool;
 

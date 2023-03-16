@@ -1,8 +1,11 @@
 ﻿// Copyright © 2023 AzureuBin. All rights reserved.
 
 #include "VirtualInputBPL.h"
-#include "Framework/Application/SlateApplication.h"
+
+#include "Engine/World.h"
+#include "Engine/GameViewportClient.h"
 #include "Slate/SGameLayerManager.h"
+#include "Framework/Application/SlateApplication.h"
 
 #define PLATFORM_APP	\
 	FSlateApplication::Get().GetPlatformApplication()
@@ -82,7 +85,10 @@ void UVirtualInputBPL::SetCursorLocationAbsolute(FVector2D Location)
 		return;
 
 	const TSharedPtr<ICursor> Cursor = FSlateApplication::Get().GetPlatformCursor();
-	Cursor->SetPosition(FMath::TruncToInt(Location.X), FMath::TruncToInt(Location.Y));
+	if (Cursor.IsValid())
+	{
+		Cursor->SetPosition(FMath::TruncToInt(Location.X), FMath::TruncToInt(Location.Y));
+	}
 }
 
 void UVirtualInputBPL::TriggerKeyPressed(const FKey Key, const bool bRepeat)
